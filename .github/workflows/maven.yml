@@ -34,10 +34,10 @@ jobs:
       run: mvn clean install
 
     - name: Publish artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Sandbox
-        path: target/Sandbox-0.0.1-SNAPSHOT.jar
+        path: target/*.jar
         if-no-files-found: error
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
