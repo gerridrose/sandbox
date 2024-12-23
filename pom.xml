@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.twistedSpur</groupId>
-	<artifactId>Sandbox</artifactId>
+	<artifactId>sandbox</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Sandbox</name>
+	<name>sandbox</name>
 	<description>Sandbox project used to test infrastructure integration.</description>
 	<url/>
 	<licenses>
@@ -20,12 +20,20 @@
 	<developers>
 		<developer/>
 	</developers>
+	<!-- scm setting allows maven plugins to update git repos -->
 	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
+		<connection>scm:git:https://github.com/gerridrose/sandbox.git</connection>
+		<developerConnection>scm:git:git@github.com:gerridrose/sandbox.git</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/gerridrose/sandbox</url>
 	</scm>
+	<distributionManagement>
+		<repository>
+			<id>github-sandbox</id>
+			<name>GitHub gerridrose Packages</name>
+			<url>https://maven.pkg.github.com/gerridrose/sandbox</url>
+		</repository>
+	</distributionManagement>
 	<properties>
 		<java.version>23</java.version>
 	</properties>
